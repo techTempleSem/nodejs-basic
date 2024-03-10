@@ -32,7 +32,7 @@ ex) 버튼을 누르거나 색을 변경할 수 있음
 -   ~.querySelector('~~'): 선택자로 가져옴
 -   ~.style.color = red: style 수정
 -   ~.getElementsByClassName('~~'): id가 해당 값인 요소 전부를 가져옴
--   ~.querySelector미ㅣ('~~'): 선택자로 전부 가져옴
+-   ~.querySelectorAll('~~'): 선택자로 전부 가져옴
 
 ## 선택자
 
