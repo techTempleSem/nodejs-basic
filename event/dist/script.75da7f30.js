@@ -141,6 +141,37 @@ buttonElement.addEventListener("click", function (event) {
   console.log(val);
   console.log(event);
 });
+var submitBtn = document.querySelector(".submit-btn");
+var title = document.querySelector("h2");
+
+// submitBtn.addEventListener("click", handleEvent);
+// submitBtn.addEventListener("dblclick", handleEvent);
+// submitBtn.addEventListener("mousedown", handleEvent);
+// submitBtn.addEventListener("mouseup", handleEvent);
+// submitBtn.addEventListener("mouseenter", handleEvent);
+// submitBtn.addEventListener("mouseleave", handleEvent);
+// submitBtn.addEventListener("mousemove", handleEvent);
+
+var form = document.querySelector("form");
+var emailInput = document.querySelector("#email");
+form.addEventListener("submit", handleEvent);
+emailInput.addEventListener("keyup", handleEvent);
+emailInput.addEventListener("keydown", handleEvent);
+emailInput.addEventListener("keypress", handleEvent);
+emailInput.addEventListener("focus", handleEvent); // 활성화
+emailInput.addEventListener("blur", handleEvent); // 비활성화
+emailInput.addEventListener("cut", handleEvent); // 잘라내기
+emailInput.addEventListener("paste", handleEvent); // 붙여넣기
+emailInput.addEventListener("input", handleEvent); // 요소 값이 달라질 때
+
+function handleEvent(e) {
+  if (e.type == "submit") {
+    e.preventDefault();
+  }
+  console.log(e.type);
+  // title.textContent = `MouseX: ${e.offsetX}  MouseY: ${e.offsetY}`;
+  title.textContent = e.target.value;
+}
 },{}],"C:/Users/semte/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
